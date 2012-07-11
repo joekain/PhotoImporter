@@ -10,13 +10,11 @@
 
 @interface JKPIViewController : UIViewController <UITextFieldDelegate> {
     NSString *url;
-    NSString *group;
     NSOperationQueue *operationQueue;
     bool isProcessing;
 }
 
 @property (strong, nonatomic) IBOutlet UITextField *urlField;
-@property (strong, nonatomic) IBOutlet UITextField *groupField;
 @property (strong, nonatomic) IBOutlet UIButton *goButton;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (strong, nonatomic) IBOutlet UIView *greyOut;

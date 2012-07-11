@@ -21,7 +21,6 @@
 @synthesize activityIndicator = _activityIndicator;
 @synthesize greyOut = _greyOut;
 @synthesize urlField = _urlField;
-@synthesize groupField = _groupField;
 
 - (void) setBusy:(BOOL)busy
 {
@@ -44,7 +43,6 @@
 - (void)viewDidUnload
 {
     [self setUrlField:nil];
-    [self setGroupField:nil];
     [self setGoButton:nil];
     [self setActivityIndicator:nil];
     [self setGreyOut:nil];
@@ -63,7 +61,6 @@
 {
     // Fetch the data from the text fields
     url = self.urlField.text;
-    group = self.groupField.text;
 
     // busy
     self.busy = YES;
