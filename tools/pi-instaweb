@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+# Usage: pi-instaweb <image files>
+# The applicaton maps /<number> to the coresponding image in the argument list.
+
+require 'sinatra'
+
+get %r{/([0-9]+)} do
+  index = params[:captures].first.to_i
+  pass if index >= ARGV.count
+  send_file ARGV[index] 
+end
