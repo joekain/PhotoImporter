@@ -16,6 +16,7 @@
 		9C48754A15AAADB500E86D7E /* JKPIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C48754915AAADB500E86D7E /* JKPIViewController.m */; };
 		9C48754D15AAADB500E86D7E /* JKPIViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C48754B15AAADB500E86D7E /* JKPIViewController_iPhone.xib */; };
 		9C48755015AAADB500E86D7E /* JKPIViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C48754E15AAADB500E86D7E /* JKPIViewController_iPad.xib */; };
+		9C7FC21515AC169D0008D061 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C7FC21415AC169D0008D061 /* AssetsLibrary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,16 +24,17 @@
 		9C48753615AAADB500E86D7E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9C48753815AAADB500E86D7E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9C48753A15AAADB500E86D7E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		9C48753E15AAADB500E86D7E /* PhotoImporter-Info.plist */ = {isa = PBXFileReference; path = "PhotoImporter-Info.plist"; sourceTree = "<group>"; };
+		9C48753E15AAADB500E86D7E /* PhotoImporter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PhotoImporter-Info.plist"; sourceTree = "<group>"; };
 		9C48754015AAADB500E86D7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9C48754215AAADB500E86D7E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9C48754415AAADB500E86D7E /* PhotoImporter-Prefix.pch */ = {isa = PBXFileReference; path = "PhotoImporter-Prefix.pch"; sourceTree = "<group>"; };
-		9C48754515AAADB500E86D7E /* JKPIAppDelegate.h */ = {isa = PBXFileReference; path = JKPIAppDelegate.h; sourceTree = "<group>"; };
+		9C48754415AAADB500E86D7E /* PhotoImporter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhotoImporter-Prefix.pch"; sourceTree = "<group>"; };
+		9C48754515AAADB500E86D7E /* JKPIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKPIAppDelegate.h; sourceTree = "<group>"; };
 		9C48754615AAADB500E86D7E /* JKPIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKPIAppDelegate.m; sourceTree = "<group>"; };
-		9C48754815AAADB500E86D7E /* JKPIViewController.h */ = {isa = PBXFileReference; path = JKPIViewController.h; sourceTree = "<group>"; };
+		9C48754815AAADB500E86D7E /* JKPIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKPIViewController.h; sourceTree = "<group>"; };
 		9C48754915AAADB500E86D7E /* JKPIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKPIViewController.m; sourceTree = "<group>"; };
 		9C48754C15AAADB500E86D7E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/JKPIViewController_iPhone.xib; sourceTree = "<group>"; };
 		9C48754F15AAADB500E86D7E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/JKPIViewController_iPad.xib; sourceTree = "<group>"; };
+		9C7FC21415AC169D0008D061 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C7FC21515AC169D0008D061 /* AssetsLibrary.framework in Frameworks */,
 				9C48753715AAADB500E86D7E /* UIKit.framework in Frameworks */,
 				9C48753915AAADB500E86D7E /* Foundation.framework in Frameworks */,
 				9C48753B15AAADB500E86D7E /* CoreGraphics.framework in Frameworks */,
@@ -69,6 +72,7 @@
 		9C48753515AAADB500E86D7E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9C7FC21415AC169D0008D061 /* AssetsLibrary.framework */,
 				9C48753615AAADB500E86D7E /* UIKit.framework */,
 				9C48753815AAADB500E86D7E /* Foundation.framework */,
 				9C48753A15AAADB500E86D7E /* CoreGraphics.framework */,
@@ -290,6 +294,7 @@
 				9C48755515AAADB500E86D7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
