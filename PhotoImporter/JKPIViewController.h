@@ -12,6 +12,7 @@
     NSString *url;
     NSOperationQueue *operationQueue;
     bool isProcessing;
+    NSString *errorString;
 }
 
 @property (strong, nonatomic) IBOutlet UITextField *urlField;

@@ -81,6 +81,16 @@
 {
     [operationQueue waitUntilAllOperationsAreFinished];
     operationQueue = nil;
+
+    if (errorString) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                        message:errorString
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+        errorString = nil;
+    }
     
     self.busy = NO;
 }
@@ -94,21 +104,23 @@
     // This processes images from pi-instaweb
     for (i = 0; TRUE; i++) {
         NSString *fullPath = [NSString stringWithFormat:@"%@/%d", url, i];
-        NSLog(@"Downloading %d\n", i);
-        
+       
         // Download each image
         NSURL *nsurl = [NSURL URLWithString:fullPath];
         NSData *data = [NSData dataWithContentsOfURL:nsurl];
         if (!data) {
+            if (i == 0) {
+                errorString = @"Could not download images";
+            }
             break;
         }
-        
+                        
         // Write image to photos
         // This is assynchronous.  Wait for it to finish or it seems to overflow and then some of the images fail.
         __block BOOL done = NO;
         [library writeImageDataToSavedPhotosAlbum:data metadata:nil completionBlock:^(NSURL *assetURL, NSError *error) {
             if (error) {
-                NSLog(@"Could not save image %d\n", i);
+                errorString = [error localizedDescription];
             }
             done = YES;
         }];
