@@ -61,6 +61,9 @@
 {
     // Fetch the data from the text fields
     url = self.urlField.text;
+    
+    // Dismiss the keyboard if present
+    [self.urlField endEditing:YES];
 
     // busy
     self.busy = YES;
